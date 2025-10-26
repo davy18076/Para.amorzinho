@@ -1,263 +1,92 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> ParaAna Alice 💖</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #ffe6f2, #ffcce0);
-      color: #333;
-      overflow-x: hidden;
-      height: 100vh;
-    }
-
-    /* Tela inicial */
-    #welcome {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, #ff99cc, #ff66b2);
-      color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-      animation: fadeIn 1.5s ease;
-    }
-
-    #welcome h1 {
-      font-size: 2.5rem;
-      margin-bottom: 15px;
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-    }
-
-    #welcome p {
-      font-size: 1.2rem;
-      margin-bottom: 30px;
-      text-align: center;
-      max-width: 500px;
-    }
-
-    #enter-btn {
-      background-color: white;
-      color: #ff66b2;
-      border: none;
-      padding: 12px 25px;
-      font-size: 1.2rem;
-      border-radius: 10px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: all 0.3s ease;
-    }
-
-    #enter-btn:hover {
-      background-color: #ffe6f2;
-      transform: scale(1.05);
-    }
-
-    @keyframes fadeOut {
-      to { opacity: 0; visibility: hidden; }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    /* Conteúdo principal */
-    #content {
-      display: none;
-      animation: fadeIn 2s ease forwards;
-    }
-
-    header {
-      background-color: #ff66b2;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      font-size: 2rem;
-      letter-spacing: 1px;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.2);
-    }
-
-    .banner {
-      position: relative;
-      width: 100%;
-      height: 300px;
-      background: url('IMG-20250822-WA0038.jpg') center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 1.8rem;
-      font-weight: bold;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
-      overflow: hidden;
-    }
-
-    .banner .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(255, 102, 178, 0.4);
-      z-index: 1;
-    }
-
-    .banner span {
-      position: relative;
-      z-index: 2;
-    }
-
-    section {
-      max-width: 800px;
-      margin: 40px auto;
-      background: white;
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    h2 {
-      color: #ff3385;
-      margin-bottom: 15px;
-      text-align: center;
-    }
-
-    p {
-      text-align: center;
-      line-height: 1.6;
-    }
-
-    .botao-link {
-      background-color: #ff66b2;
-      color: white;
-      padding: 12px 25px;
-      text-decoration: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .botao-link:hover {
-      background-color: #ff3385;
-      transform: scale(1.05);
-    }
-
-    footer {
-      text-align: center;
-      padding: 15px;
-      background-color: #ff99cc;
-      color: white;
-      margin-top: 40px;
-      font-size: 0.9rem;
-    }
-
-    /* Corações flutuando */
-    .heart {
-      position: fixed;
-      bottom: -10px;
-      font-size: 20px;
-      animation: subir 5s linear infinite;
-      opacity: 0.8;
-      z-index: 999;
-    }
-
-    @keyframes subir {
-      0% { transform: translateY(0) scale(1); opacity: 0.8; }
-      100% { transform: translateY(-100vh) scale(1.5); opacity: 0; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Davy 💞 Ana Alice</title>
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #ffe6f0, #f9e6ff);
+    overflow-x: hidden;
+    text-align: center;
+}
+h1 {
+    margin-top: 20px;
+    font-size: 3em;
+    animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+.banner {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 0 20px rgba(255,192,203,0.8);
+    animation: glow 2s infinite alternate;
+}
+@keyframes glow {
+    from { box-shadow: 0 0 20px rgba(255,192,203,0.6); }
+    to { box-shadow: 0 0 30px rgba(255,192,203,1); }
+}
+.photo {
+    margin: 20px auto;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255,192,203,0.8);
+    animation: glow 2s infinite alternate;
+}
+.message {
+    font-size: 1.5em;
+    max-width: 600px;
+    margin: 20px auto;
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+}
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+.heart {
+    position: absolute;
+    font-size: 20px;
+    animation: rise 5s linear infinite;
+}
+@keyframes rise {
+    0% { transform: translateY(100vh) translateX(0); opacity: 1; }
+    100% { transform: translateY(-100px) translateX(50px); opacity: 0; }
+}
+footer {
+    margin-top: 50px;
+    font-size: 1.2em;
+}
+</style>
 </head>
 <body>
-  <!-- Tela de boas-vindas -->
-  <div id="welcome">
-    <h1>💖 Bem-vinda, minha princesa 💖</h1>
-    <p>Preparei esse cantinho com muito amor só pra você.  
-    Clique abaixo e entre no nosso mundinho especial 🌸</p>
-    <button id="enter-btn">Entrar 💞</button>
-  </div>
-
-  <!-- Conteúdo principal -->
-  <div id="content">
-    <header>
-      Ana Alice 💖
-    </header>
-
-    <div class="banner">
-      <div class="overlay"></div>
-      <span>Esse site e só pra você ver o quanto eu te amo amorzinho 💕</span>
-    </div>
-
-    <section>
-      <h2>Oi, meu amor! ✨</h2>
-      <p>
-        Este cantinho é todo seu 💗
-Pra lembrar, todos os dias, o quanto você é a pessoa mais importante da minha vida.
-Cada instante ao seu lado é mágico, como se o mundo ficasse mais bonito só por você existir.
-O seu sorriso ilumina até os meus dias mais nublados, e o seu abraço é o lugar onde eu encontro paz, conforto e amor verdadeiro.
-Você é o motivo das minhas risadas sinceras, da calma que invade meu coração quando ouço sua voz, e da saudade boa que sinto mesmo quando acabamos de nos ver.
-Estar com você me faz perceber que o amor não é feito apenas de palavras bonitas, mas de gestos simples, olhares que dizem tudo e corações que batem no mesmo ritmo.
-Desde que você entrou na minha vida, tudo ganhou mais cor, mais sentido e mais alegria.
-Os dias deixaram de ser apenas dias  viraram capítulos da nossa história, uma história que quero continuar escrevendo ao seu lado, com carinho, respeito e muito amor.
-Te amo mais do que qualquer palavra poderia explicar, mais do que o tempo pode medir, mais do que os sonhos podem imaginar.
-E se um dia me pedirem pra definir o amor, eu vou apenas dizer o seu nome 💖
-
-      </p>
-    </section>
-
-    <section>
-      <h2>Nossa Música 🎶</h2>
-      <div class="player" style="text-align:center;">
-        <iframe width="100%" height="315"
-          src="https://www.youtube.com/embed/caQbPskYqXk"
-          title="YouTube video player" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
-      </div>
-    </section>
-
-    <footer>
-      Feito com amor por KING 💞
-    </footer>
-  </div>
-
-  <script>
-    const enterBtn = document.getElementById("enter-btn");
-    const welcome = document.getElementById("welcome");
-    const content = document.getElementById("content");
-
-    enterBtn.addEventListener("click", () => {
-      welcome.style.animation = "fadeOut 1s forwards";
-      setTimeout(() => {
-        welcome.style.display = "none";
-        content.style.display = "block";
-      }, 1000);
-    });
-
-    // Corações flutuando
-    function criarCoracao() {
-      const heart = document.createElement("div");
-      heart.classList.add("heart");
-      heart.textContent = "💖";
-      heart.style.left = Math.random() * 100 + "vw";
-      heart.style.animationDuration = Math.random() * 2 + 3 + "s";
-      document.body.appendChild(heart);
-      setTimeout(() => heart.remove(), 5000);
-    }
-    setInterval(criarCoracao, 600);
-  </script>
+<h1>Davy 💞 Ana Alice</h1>
+<img src="banner.jpg" alt="Banner" class="banner">
+<img src="IMG-20250822-WA0038.jpg" alt="Foto do casal" class="photo">
+<p class="message">
+  Este cantinho é todo seu 💗<br>
+  Pra lembrar, todos os dias, o quanto você é a pessoa mais importante da minha vida.<br>
+  Cada instante ao seu lado é mágico, como se o mundo ficasse mais bonito só por você existir.
+</p>
+<iframe width="0" height="0" src="https://www.youtube.com/embed/caQbPskYqXk?autoplay=1&loop=1&playlist=caQbPskYqXk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<footer>Feito com amor por Davy 💗</footer>
+<script>
+function createHeart() {
+    const heart = document.createElement('div');
+    heart.className = 'heart';
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.textContent = '💖';
+    document.body.appendChild(heart);
+    setTimeout(() => document.body.removeChild(heart), 5000);
+}
+setInterval(createHeart, 300);
+</script>
 </body>
 </html>
